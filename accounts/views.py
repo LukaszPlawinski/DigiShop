@@ -4,6 +4,7 @@ from django.contrib import auth
 
 # Create your views here.
 def index(request):
+    login_form = user_login_form()
     return render(request, 'index.html')
     
 def login(request):
@@ -22,4 +23,4 @@ def login(request):
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
         login_form = user_login_form()
-    return render(request, 'index.html')
+    return render(request, 'login.html', {'login_form': login_form})
