@@ -24,3 +24,7 @@ def login(request):
     else:
         login_form = user_login_form()
     return render(request, 'login.html', {'login_form': login_form})
+    
+def logout(request):
+    auth.logout(request)
+    return render(request, 'index.html')
