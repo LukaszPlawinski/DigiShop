@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
-
-
-Hi there! Welcome to AWS Cloud9!
-
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
-
-Happy coding!
-=======
 # DigiShop
 Python / Django ecommerce app
->>>>>>> c2dda28270561a5b9f132aa5d8f21bdbc4de450d
+
+##Design
+
+[Mockup](https://xd.adobe.com/view/354de7ba-3a16-4cfd-6194-bcbf39fe350d-437c/)
