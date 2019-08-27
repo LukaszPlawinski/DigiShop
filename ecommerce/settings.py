@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['b7f21d2a061c413bacf91677e58f71b0.vfs.cloud9.us-east-1.amazonaw
 
 INSTALLED_APPS = [
     'accounts',
+    'shop',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
