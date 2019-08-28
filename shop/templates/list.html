@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="container ">
+                <ul class="navbar-nav mr-auto d-flex justify-content-around">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!--Navbar-->
+
+<!--Hero Picture and search input-->
+
+<section class="section-intro text-white text-center">
+<div class="container d-flex flex-column"  style="min-height:80vh;">
+    <div class="row section-header">
+        <div class="col-lg-8 col-sm-12 text-center mx-auto">
+            <h1 class="display-4 mb-3">Big Sale up to 70%</h1>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-lg-9 col-md-8 col-sm-12 mx-auto text-center">
+            <form class="form-noborder">
+                <div class="form-row mb-5">
+                    <div class="col-lg-8 col-sm-12 form-group">
+                        <input class="form-control form-control-lg" placeholder="Search keyword" type="text">
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-12 form-group">
+                        <button class="btn btn-warning btn-block btn-lg" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+            <ul class="list-inline my-5">
+                <li class="list-inline-item">
+                    <a class="h4 text-light p-2" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="h4 text-light p-2" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="h4 text-light p-2" href="#">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="h4 text-light p-2" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- col.// -->
+    </div> <!-- row.// -->
+</div>
+</section><!--Hero Picture and search input-->
+
+
+{% endblock %}
