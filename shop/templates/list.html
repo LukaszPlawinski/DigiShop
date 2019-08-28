@@ -83,4 +83,36 @@
 </section><!--Hero Picture and search input-->
 
 
+<div class="container">
+    <!--Category-->
+    <h1 class="text-center">{% if category %}{{ category.name }}{% else %}Products
+{% endif %}</h1>
+
+<div class="row">
+    
+{% for product in products %}
+    <div class="col-md-3 col-sm-6">
+    	<figure class="card card-product">
+    		<div class="img-wrap"> 
+    		<img src="
+    		{% if product.image %}
+    	    	{{ product.image.url }}
+    		{% else %}
+                {% static "img/no_image.png" %}
+            {% endif %}">
+    		</div>
+    		<figcaption class="info-wrap">
+    			<a href="{{ product.get_absolute_url }}" class="title">{{ product.name }}</a>
+    			<div class="price-wrap">
+    				<span class="price-new">{{ product.price }}</span>
+    			</div> <!-- price-wrap.// -->
+    		</figcaption>
+    	</figure> <!-- card // -->
+    </div> <!-- col // -->
+{% endfor %}
+</div>
+</div>
+
+
+
 {% endblock %}
