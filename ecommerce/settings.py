@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['b7f21d2a061c413bacf91677e58f71b0.vfs.cloud9.us-east-1.amazonaw
 INSTALLED_APPS = [
     'accounts',
     'shop',
+    'cart',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -128,3 +129,4 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+CART_SESSION_ID = 'cart'
