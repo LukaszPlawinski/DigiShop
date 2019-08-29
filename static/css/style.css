@@ -6,11 +6,11 @@
     background: -webkit-gradient(linear,
         left top, left bottom,
         from(rgba(247, 247, 247, 0.2)),
-        to(rgba(255, 255, 255, 0.2))), url("../img/cliffs.jpg");
+        to(rgba(255, 255, 255, 0.2))), url("../images/gaming.jpg");
     background: -webkit-linear-gradient(rgba(247, 247, 247, 0.2),
-        rgba(255, 255, 255, 0.2)), url("../img/cliffs.jpg");
+        rgba(255, 255, 255, 0.2)), url("../images/gaming.jpg");
     background: -o-linear-gradient(rgba(247, 247, 247, 0.2),
-        rgba(255, 255, 255, 0.2)), url("../img/cliffs.jpg");
+        rgba(255, 255, 255, 0.2)), url("../images/gaming.jpg");
     background: linear-gradient(rgba(247, 247, 247, 0.2),
         rgba(255, 255, 255, 0.2)), url("../images/gaming.jpg");
     background-position: center;
