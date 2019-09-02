@@ -31,9 +31,7 @@ ALLOWED_HOSTS = ['b7f21d2a061c413bacf91677e58f71b0.vfs.cloud9.us-east-1.amazonaw
 # Application definition
 
 INSTALLED_APPS = [
-    'accounts',
-    'shop',
-    'cart',
+   
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'shop',
+    'cart',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
