@@ -22,6 +22,7 @@ def login(request):
         login_form = user_login_form()
     return render(request, 'login.html', {'login_form': login_form})
     
+
 def logout(request):
     auth.logout(request)
     return redirect(reverse('shop:product_list'))
