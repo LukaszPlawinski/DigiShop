@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http import require_POST
+from shop.models import Product
+from .cart import Cart
+from .forms import CartAddProductForm
 
-# Create your views here.
-def view_cart(request):
-    """A View that renders the cart contents page"""
-    return render(request, "cart.html")
-
-
+def cart_detail(request):
+    cart = Cart(request)
+    return render(request, 'cart_detail.html', {'cart': cart})
