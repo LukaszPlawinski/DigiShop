@@ -39,14 +39,14 @@
     </div>
     <div class="row ">
         <div class="col-lg-9 col-md-8 col-sm-12 mx-auto text-center">
-            <form class="form-noborder">
+            <form class="form-noborder" action="{% url 'search:search' %}" method="get">
                 <div class="form-row mb-5">
                     <div class="col-lg-8 col-sm-12 form-group">
-                        <input class="form-control form-control-lg" placeholder="Search keyword" type="text">
+                        <input class="form-control form-control-lg" placeholder="Search keyword"  name="q" type="text">
                     </div>
                     
                     <div class="col-lg-4 col-sm-12 form-group">
-                        <button class="btn btn-warning btn-block btn-lg" type="submit">Search</button>
+                        <button class="btn btn-warning btn-block btn-lg" type="search">Search</button>
                     </div>
                 </div>
             </form>
