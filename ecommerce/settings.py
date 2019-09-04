@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'shop',
     'cart',
+    'search',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CART_SESSION_ID = 'cart'
