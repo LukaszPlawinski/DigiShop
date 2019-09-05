@@ -59,6 +59,9 @@
   <dt>Total:</dt>
   <dd class="text-right"><strong>{{ cart.get_total_price }}</strong></dd>
 </dl>
+<a href="{% url 'orders:order_create' %}" class="button">
+Checkout
+</a>
 
 	</aside> <!-- col.// -->
 </div>
