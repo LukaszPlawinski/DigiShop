@@ -3,6 +3,9 @@ from .forms import user_login_form, register_user_form
 from django.contrib import auth
 from django.contrib.auth.models import User
 from shop.views import product_list
+from shop.models import Category
+
+categories = Category.objects.all()
 
 
 def login(request):
@@ -20,7 +23,7 @@ def login(request):
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
         login_form = user_login_form()
-    return render(request, 'login.html', {'login_form': login_form})
+    return render(request, 'login.html', {'login_form': login_form, 'categories':categories})
     
 
 def logout(request):
@@ -43,4 +46,4 @@ def registration(request):
     else:
         registration_form = register_user_form()
     return render(request, 'registration.html', {
-        "registration_form": registration_form})
+        "registration_form": registration_form, 'categories':categories})
