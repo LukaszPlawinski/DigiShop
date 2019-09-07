@@ -4,6 +4,7 @@ from .forms import OrderCreateForm
 from cart.cart import Cart
 from django.conf import settings
 import stripe
+from shop.models import Category
 
 
 stripe.api_key = settings.STRIPE_SECRET
@@ -11,6 +12,7 @@ stripe.api_key = settings.STRIPE_SECRET
 def order_create(request):
     cart = Cart(request)
     total = int(cart.get_total_price() * 100)
+    categories = Category.objects.all()
     if request.method == 'POST':
 
         form = OrderCreateForm(request.POST)
@@ -31,11 +33,11 @@ def order_create(request):
             cart.clear()
             return render(request,
                             'created.html',
-                            {'order': order})
+                            {'order': order, 'categories': categories})
     else:
         form = OrderCreateForm()
         key = settings.STRIPE_PUBLISHABLE
     return render(request,
                 'create.html',
-                {'cart': cart, 'form': form, 'key':key, 'total':total})
+                {'cart': cart, 'form': form, 'key':key, 'total':total, 'categories': categories})
                 
