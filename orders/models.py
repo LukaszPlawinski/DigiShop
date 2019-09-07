@@ -1,5 +1,6 @@
 from django.db import models
 from shop.models import Product
+from django.conf import settings
 
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
