@@ -38,8 +38,21 @@ a .nav-link{
     color: #fff;
     text-decoration: none;
 }
-a .info-wrap{
+a .info-wrap, .card-body .title{
     color: #00034D;
+}
+.product-title{
+    font-size: 1.5rem;
+    
+}
+.price-new{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #C80304;
+}
+.price{
+     font-weight: bold;
+    color:#C80304;
 }
 .header-main{
     padding: 0;
@@ -59,6 +72,9 @@ a .info-wrap{
 }
 .result-text{
     margin: 25px;
+}
+#id_quantity{
+    margin:10px;
 }
 @media only screen and (min-width: 760px) {
     .header-left h1{
