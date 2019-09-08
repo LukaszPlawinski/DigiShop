@@ -27,7 +27,7 @@ class Product(models.Model):
                               blank=True)
     description = models.TextField(blank=True)
     price = models.IntegerField(blank="False")
-    old_price = models.IntegerField(blank="False", default=1)
+    old_price = models.IntegerField(blank=True, default="")
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
