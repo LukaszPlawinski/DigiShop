@@ -22,7 +22,15 @@
     letter-spacing: 0.8px;
     word-spacing: 1.5px;
 }
-
+.red{
+    color:#C80304;
+}
+.text-white{
+    text-shadow: 1px 1px 5px #555;
+}
+.red:hover{
+    color: red;
+}
 .section-header{
     margin-top: 20px !important;
 }
@@ -76,15 +84,56 @@ a .info-wrap, .card-body .title{
 #id_quantity{
     margin:10px;
 }
-@media only screen and (min-width: 760px) {
-    .header-left h1{
-    font-size: 4rem;
-    padding-top: 16px;
+.hr-top{
+    border-top: 2px solid rgba(0,0,0,.1)
 }
-    .header-right h1{
-    font-size: 7rem;
+.img-wrap{
+    padding-left: 0;
+}
+.qty{
+    padding-right: 0;
+}
+.widget-header{
+    margin:0;
+}
+.shopping-cart-wrap{
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 15px;
+    margin:10px;
+}
+.gallery-wrap .img-big-wrap img{
+    height: 320px;
+}
+.product-card{
+    margin-top: 30px;
+}
+.logo{
+    width: 70px !important;
+}
+.my-account-icon{
+   padding:0.5rem 0; 
+}
+.table-header{
+    margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+        .header-left h1{
+        font-size: 4rem;
+        padding-top: 16px;
     }
-    .section-header{
-    margin-top: 150px !important;
-}
+        .header-right h1{
+        font-size: 7rem;
+        }
+        .section-header{
+        margin-top: 150px !important;
+    }
+    .shopping-cart-wrap{
+        margin:0;
+    }
+    .gallery-wrap .img-big-wrap img{
+        height: 450px;
+    }
+    .logo{
+    width: auto !important;
+    }
 }
