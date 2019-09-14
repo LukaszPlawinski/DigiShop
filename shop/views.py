@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 
+
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
@@ -14,6 +15,7 @@ def product_list(request, category_slug=None):
                 {'category': category,
                 'categories': categories,
                 'products': products})
+                
                 
 def product_detail(request, id, slug):
     category = None
