@@ -4,6 +4,8 @@ from shop.models import Product, Category
 from .cart import Cart
 from .forms import CartAddProductForm
 
+
+
 def cart_detail(request):
     cart = None
     cart = Cart(request)
@@ -15,12 +17,14 @@ def cart_detail(request):
     return render(request, 'cart_detail.html', 
                 {'cart': cart, 
                 'categories': categories})
+                
     
 def cart_remove(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product)
     return redirect('cart:cart_detail')
+    
     
 @require_POST
 def cart_add(request, product_id):
