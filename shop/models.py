@@ -16,6 +16,7 @@ class Category(models.Model):
         args=[self.slug])
     def __str__(self):
         return self.name
+        
     
 class Product(models.Model):
     category = models.ForeignKey(Category,
@@ -26,11 +27,19 @@ class Product(models.Model):
     image = models.ImageField(upload_to='products/%Y/%m/%d',
                               blank=True)
     description = models.TextField(blank=True)
+    feature1 = models.CharField(max_length=60,blank=False, default='Feature')
+    feature2 = models.CharField(max_length=60,blank=False, default='Feature')
+    feature3 = models.CharField(max_length=60,blank=False, default='Feature')
+    feature4 = models.CharField(max_length=60,blank=False, default='Feature')
+    feature5 = models.CharField(max_length=60,blank=False, default='Feature')
+    model = models.CharField(max_length=30,blank=False, default='Feature')
+    color = models.CharField(max_length=30,blank=False, default='Feature')
     price = models.IntegerField(blank="False")
     old_price = models.IntegerField(blank=True, default="")
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    
     
     class Meta:
         ordering = ('name',)
