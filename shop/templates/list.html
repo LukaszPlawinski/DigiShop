@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<!--Hero Picture and search input-->
+<!--------------------------Hero Picture and search input-------------->
 
 <section class="section-intro text-white text-center">
 <div class="container d-flex flex-column layout" >
@@ -41,32 +41,27 @@
             </form>
             <ul class="list-inline my-5">
                 <li class="list-inline-item">
-                    <a class="h4 text-light p-2" href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="h4 text-light p-2" href="#">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="h4 text-light p-2" href="#">
-                        <i class="fab fa-dribbble"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="h4 text-light p-2" href="#">
+                    <a class="h4 text-light p-2" href="https://www.instagram.com/lukasz_plawinski/">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </li>
+                <li class="list-inline-item">
+                    <a class="h4 text-light p-2" href="https://www.linkedin.com/in/lukasz-plawinski-2b96a9168/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="h4 text-light p-2" href="https://github.com/LukaszPlawinski">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
             </ul>
-        </div> <!-- col.// -->
-    </div> <!-- row.// -->
+        </div> 
+    </div> 
 </div>
-</section><!--Hero Picture and search input-->
+</section>
 
-
+<!---------------------------------------------List of products---------------------------------->
 <div class="container">
     <!--Category-->
     <div class="text-center result-text">
@@ -78,11 +73,9 @@
             {% endif %}
         {% endif %}
     </div>
-
 <div class="row">
-    
 {% for product in products %}
-    <div class="col-md-3 col-sm-6">
+    <div class="col-lg-3 col-sm-6">
         <a href="{{ product.get_absolute_url }}">
         	<figure class="card card-product">
         		<div class="img-wrap"> 
@@ -98,15 +91,12 @@
         			<div class="price-wrap">
         				<span class="price-new">&euro;{{ product.price }}</span>
         				<del class="price-old">&euro;{{ product.old_price }}</del>
-        			</div> <!-- price-wrap.// -->
+        			</div>
         		</figcaption>
-        	</figure> <!-- card // -->
+        	</figure> 
     	</a>
-    </div> <!-- col // -->
+    </div> 
 {% endfor %}
 </div>
 </div>
-
-
-
 {% endblock %}
