@@ -2,7 +2,10 @@ from django.db import models
 from shop.models import Product
 from django.conf import settings
 
+
 class Order(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                                on_delete=models.CASCADE, null=True, blank=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
@@ -11,7 +14,8 @@ class Order(models.Model):
     city = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    paid = models.BooleanField(default=False)
+    paid = models.BooleanField(default=True)
+    total = models.DecimalField(max_digits=10, decimal_places=2, default="0")
     
     class Meta:
         ordering = ('-created',)
