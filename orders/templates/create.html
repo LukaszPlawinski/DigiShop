@@ -1,30 +1,58 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
 {% load crispy_forms_tags %}
-<h1>Checkout</h1>
-<div class="order-info">
-    <h3>Your order</h3>
-    <ul>
-        {% for item in cart %}
-        <li>
-            {{ item.quantity }}x {{ item.product.name }}
-            <span>${{ item.total_price }}</span>
-        </li>
-        {% endfor %}
-    </ul>
-    <p>Total: ${{ cart.get_total_price }}</p>
-</div>
-<div class="container">
-    <form action="." method="post" class="order-form">
-    {{ form | crispy }}
-    
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="{{ key }}"
-    data-description="A Django Charge"
-    data-amount="{{ total }} "
-    data-locale="auto">
-    </script>
-    {% csrf_token %}
-</form>
-</div>
-
+	<section class="section-content bg padding-y border-top">
+		<div class="container">
+			<form action="." method="post" class="order-form">
+				<div class="row justify-content-around">
+<!----------------------------------------Form Column---------------------->
+					<main class="col-12 col-md-7 checkout-form">
+		                    {{ form | crispy }}       
+		                    {% csrf_token %}       
+					</main>
+<!----------------------------------------Payment Column---------------------->
+					<aside class="col-12 col-md-3 mt-4">
+						<div class="items-list">
+							<ul>
+			                    {% for item in cart %}
+			                    <li><h5>
+			                        {{ item.quantity }}x {{ item.product.name }}
+			                        <span class="float-right">&euro;{{ item.total_price }}</span>
+			                        </h5>
+			                    </li>
+			                    {% endfor %}
+		                	</ul>
+						</div>
+						<br>
+						<hr>
+						<div >
+							<h4 class="total_price">Total:   <span class="float-right">&euro;{{ cart.get_total_price }}</span> </h4>
+						</div>
+						<div class="text-right">
+							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		                    data-key="{{ key }}"
+		                    data-description="A Django Charge"
+		                    data-amount="{{ total }} "
+		                    data-locale="auto">
+		                    </script>
+						</div>
+						<hr>
+						<figure class="itemside mb-3">
+							<aside class="aside"><img src={% static 'images/pay-visa.png' %}></aside>
+							<div class="text-wrap small text-muted">
+								Pay 84.78 AED ( Save 14.97 AED ) By using ADCB Cards
+							</div>
+						</figure>
+						<figure class="itemside mb-3">
+							<aside class="aside"> <img src={% static 'images/pay-mastercard.png' %}> </aside>
+							<div class="text-wrap small text-muted">
+								Pay by MasterCard and Save 40%. 
+							</div>
+						</figure>
+					</aside>
+				</div>
+			</form>
+		</div>
+	</section>
 {% endblock %}
