@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='old_price',
-            field=models.IntegerField(blank=True, default=''),
+            field=models.IntegerField(blank=True, default=0),
         ),
     ]
