@@ -35,7 +35,7 @@ class Product(models.Model):
     model = models.CharField(max_length=30,blank=False, default='Feature')
     color = models.CharField(max_length=30,blank=False, default='Feature')
     price = models.IntegerField(blank="False")
-    old_price = models.IntegerField(blank=True, default="")
+    old_price = models.IntegerField(blank=True, default=0)
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
