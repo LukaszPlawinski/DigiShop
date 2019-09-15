@@ -56,7 +56,9 @@
 .result-text{
     margin: 25px;
 }
-
+.content{
+    min-height: 75vh;
+}
 
 
 /**************************** Navbar ****************************/
