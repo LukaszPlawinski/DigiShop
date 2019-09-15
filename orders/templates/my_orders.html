@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="section-content padding-y border-top">
+	<div class="container">
+		<div class="row justify-content-center">
+			<main class="col-12 col-lg-9 ">
+				<div class="shopping-cart-wrap">
+					<div class="row text-center table-header">
+						<p class="col-3">Name</p>
+						<p class="col-2">Order Id</p>
+						<p class="col-2">Date</p>
+						<p class="col-2">Price</p>
+						<p class="col-3">Paid</p>
+					</div>
+					{% for order in orders %} 
+					<hr>
+					<div class="row text-center">
+						<figure class="media col-3">
+								<h6 class=" col-12 title ">{{ order.first_name }} {{ order.last_name }} </h6>	</figure>
+						<div class="col-2 qty">
+							{{ order.id }}
+						</div>
+						<div class="price-wrap col-2">
+							<p>{{ order.created }}</p>
+						</div>
+						<div class="price-wrap col-2">
+							<p>{{ order.total }}</p>
+						</div>
+						<div class="text-center col-3">
+							{% if order.paid %}
+							<p>Yes</p>
+							{% else %}
+							<p>No</p>
+							{% endif %}
+						</div>
+					</div>{% endfor %}
+				</div>
+			</main>
+		</div>
+
+	</div>
+	<!-- container .//  -->
+</section>
+{% endblock %}
