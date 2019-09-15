@@ -1,5 +1,17 @@
-.icon-sm{
-    padding-top: 10px !important;
+/* 
+    1.Main Page
+    2.Navbar
+    3.Product detail
+    4.Cart/Checkout/Orders
+    5.Media
+
+*/
+
+
+/**************************** Main Page ****************************/
+
+.section-header{
+    margin-top: 20px !important;
 }
 .section-intro{
     margin: 0;
@@ -22,6 +34,16 @@
     letter-spacing: 0.8px;
     word-spacing: 1.5px;
 }
+.layout{
+    min-height:90vh;
+    margin-bottom: 30px;
+}
+.header-left h1{
+    font-size: 3rem;
+}
+.header-right h1{
+    font-size: 4rem;
+}
 .red{
     color:#C80304;
 }
@@ -31,12 +53,15 @@
 .red:hover{
     color: red;
 }
-.section-header{
-    margin-top: 20px !important;
+.result-text{
+    margin: 25px;
 }
-.layout{
-    min-height:90vh;
-    margin-bottom: 30px;
+
+
+
+/**************************** Navbar ****************************/
+.icon-sm{
+    padding-top: 10px !important;
 }
 nav{
     background-color: #00034D;
@@ -49,6 +74,26 @@ a .nav-link{
 a .info-wrap, .card-body .title{
     color: #00034D;
 }
+.brand-wrap .logo{
+    max-height: 80px;
+}
+.header-main{
+    padding: 0;
+}
+.navbar-toggler{
+    margin: 0 auto;
+}
+.logo{
+    width: 70px !important;
+}
+.my-account-icon{
+   padding:0.5rem 0; 
+}
+.widget-header{
+    margin:0;
+}
+
+/**************************** Product Detail ****************************/
 .product-title{
     font-size: 1.5rem;
     
@@ -62,28 +107,16 @@ a .info-wrap, .card-body .title{
      font-weight: bold;
     color:#C80304;
 }
-.header-main{
-    padding: 0;
-}
-.brand-wrap .logo{
-    max-height: 80px;
-}
-
-.navbar-toggler{
-    margin: 0 auto;
-}
-.header-left h1{
-    font-size: 3rem;
-}
-.header-right h1{
-    font-size: 4rem;
-}
-.result-text{
-    margin: 25px;
-}
 #id_quantity{
     margin:10px;
 }
+.product-card{
+    margin-top: 30px;
+}
+
+
+/************************* Cart/Checkout/Orders ***************************/
+
 .hr-top{
     border-top: 2px solid rgba(0,0,0,.1)
 }
@@ -93,9 +126,6 @@ a .info-wrap, .card-body .title{
 .qty{
     padding-right: 0;
 }
-.widget-header{
-    margin:0;
-}
 .shopping-cart-wrap{
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 15px;
@@ -104,28 +134,45 @@ a .info-wrap, .card-body .title{
 .gallery-wrap .img-big-wrap img{
     height: 320px;
 }
-.product-card{
-    margin-top: 30px;
-}
-.logo{
-    width: 70px !important;
-}
-.my-account-icon{
-   padding:0.5rem 0; 
+.gallery-wrap .img-big-wrap img, 
+.card-product .img-wrap img{
+       padding:15px;
 }
 .table-header{
     margin-top: 10px;
 }
+.stripe-button-el{
+    color: #212529 !important;
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+}
+.items-list ul{
+    list-style: none;
+    padding:10px 0;  
+}
+.btn-checkout{
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-image: linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);
+}
+.btn-checkout:hover{
+    color:#f4f4f4;
+}
+
+/************************* Media ***************************/
 @media only screen and (min-width: 768px) {
-        .header-left h1{
-        font-size: 4rem;
-        padding-top: 16px;
+    .header-left h1{
+    font-size: 4rem;
+    padding-top: 16px;
     }
-        .header-right h1{
-        font-size: 7rem;
-        }
-        .section-header{
-        margin-top: 150px !important;
+    .header-right h1{
+    font-size: 7rem;
+    }
+    .section-header{
+    margin-top: 150px !important;
     }
     .shopping-cart-wrap{
         margin:0;
@@ -135,5 +182,8 @@ a .info-wrap, .card-body .title{
     }
     .logo{
     width: auto !important;
+    }
+    .widget-header{
+        margin-right: 10px;
     }
 }
