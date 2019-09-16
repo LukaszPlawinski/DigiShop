@@ -1,3 +1,5 @@
+
+[![Build Status](https://travis-ci.org/LukaszPlawinski/DigiShop.svg?branch=master)](https://travis-ci.org/LukaszPlawinski/DigiShop)
 # DigiShop
 Python / Django ecommerce app
 
