@@ -66,6 +66,7 @@ def edit(request):
     
         if user_form.is_valid() :
             user_form.save()
+            return redirect(reverse('shop:product_list'))
     else:
         user_form = UserEditForm(instance=request.user)
     return render(request,
