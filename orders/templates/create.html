@@ -1,14 +1,14 @@
 {% extends "base.html" %} 
 {% load static %}
 {% block content %}
-{% load bootstrap_tags %}
+{% load crispy_forms_tags %}
 	<section class="section-content padding-y border-top">
 		<div class="container">
 			<form action="." method="post" class="order-form">
 				<div class="row justify-content-around">
 <!----------------------------------------Form Column---------------------->
 					<main class="col-12 col-md-7 checkout-form">
-		                    {{ form | as_bootstrap }}       
+		                    {{ form | crispy }}       
 		                    {% csrf_token %}       
 					</main>
 <!----------------------------------------Payment Column---------------------->
