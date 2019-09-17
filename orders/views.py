@@ -25,7 +25,7 @@ def order_create(request):
         if form.is_valid():
             order = form.save()
             order.user = request.user
-            order.total = cart.get_total_price()
+            order.total = int(cart.get_total_price())
             order.save()
 #Stripe payment details
             charge = stripe.Charge.create(
