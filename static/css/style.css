@@ -96,6 +96,21 @@ a .info-wrap, .card-body .title{
 .widget-header{
     margin:0;
 }
+.float_btn i {
+    visibility: visible;
+    font-size: 30px;
+    height: 50px;
+    margin-top: 20px;
+    width: 100px;
+    -webkit-animation: pulse 2s infinite;
+            animation: pulse 2s infinite;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+    text-rendering: optimizeLegibility;
+}
+.hide {
+    visibility: hidden;
+}
 
 /**************************** Product Detail ****************************/
 .product-title{
