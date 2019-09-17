@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="{% static 'libraries/ecommerce/css/responsive.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'libraries/ecommerce/css/ui.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'fonts/fontawesome/css/fontawesome-all.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
 
     <title>Digi Shop</title>
 </head>
 <body>
+	<!------------------------------------ Navbar ----------------------------------->
     <section class="header-main shadow-sm">
 	<div class="container">
 		<div class="row align-items-center">
@@ -73,47 +75,64 @@
 				</div> 
 			</div> <!--Col->
 		</div> <!--Row-->
-	</div> <!--Container-->
-</section>
+		</div> <!--Container-->
+	</section>
 
-<!------------------------------------ Navbar ----------------------------------->
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="container ">
-            <ul class="navbar-nav mr-auto d-flex justify-content-around">
-            	<li {% if not category %}class="selected"{% else %} class="nav-item" {% endif %}>
-					<a class="nav-link" href="{% url "shop:product_list" %}">All</a>
-				</li>	
-				{% for c in categories %}
-					<li
-					{% if category.slug == c.slug %}
-						class="selected nav-item"
-					{% else %}
-						class="nav-item"
-					{% endif %}>
-						<a class="nav-link" href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-					</li>
-				{% endfor %}
-            </ul>
-        </div>
+<!------------------------ Categories Navbar ------------------------>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	        <div class="container ">
+	            <ul class="navbar-nav mr-auto d-flex justify-content-around">
+	            	<li {% if not category %}class="selected"{% else %} class="nav-item" {% endif %}>
+						<a class="nav-link" href="{% url "shop:product_list" %}">All</a>
+					</li>	
+					{% for c in categories %}
+						<li
+						{% if category.slug == c.slug %}
+							class="selected nav-item"
+						{% else %}
+							class="nav-item"
+						{% endif %}>
+							<a class="nav-link" href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+						</li>
+					{% endfor %}
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+	
+
+<!------------------------ Page Content ---------------------------->
+
+	<div class="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+	
+
+<!---------------- START Bootstrap-Cookie-Alert -------------------->
+
+    <div class="alert text-center cookiealert" role="alert" id='cookie'>
+        <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+        <button type="button" class="btn btn-warning btn-sm acceptcookies" aria-label="Close">
+            I agree
+        </button>
     </div>
-</nav>
-<!------------------------ Navbar ------------------------>
-<div class="content">
-	{% block content %}
-	{% endblock %}
-</div>
+    
+    
+<!------------------------ Footer ----------------------------------->
 
-<footer class="text-center">
-	<p class="copyright text-muted">Copyright &copy; Lukasz Plawinski 2019</p>
-</footer>
+	<footer class="text-center">
+		<p class="copyright text-muted">Copyright &copy; Lukasz Plawinski 2019</p>
+	</footer>
     
  <!---------------------- SCRIPTS ------------------------->
-
+	<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
     <script type="text/javascript" src="{% static 'libraries/Jquery/jquery-3.4.1.min.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'libraries/Bootstrap/js/bootstrap.min.js' %}"></script>
