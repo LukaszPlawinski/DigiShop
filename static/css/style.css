@@ -59,7 +59,9 @@
 .content{
     min-height: 75vh;
 }
-
+.cookiealert {
+    background: #00034D;
+}
 
 /**************************** Navbar ****************************/
 .icon-sm{
