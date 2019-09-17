@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,reverse
-from .forms import user_login_form, register_user_form
+from .forms import user_login_form, register_user_form, UserEditForm
 from django.contrib import auth
 from django.contrib.auth.models import User
 from shop.views import product_list
@@ -57,3 +57,17 @@ def registration(request):
         registration_form = register_user_form()
     return render(request, 'registration.html', {
         "registration_form": registration_form, 'categories':categories})
+        
+@login_required
+def edit(request):
+    if request.method == 'POST':
+        user_form = UserEditForm(instance=request.user,
+                                data=request.POST)
+    
+        if user_form.is_valid() :
+            user_form.save()
+    else:
+        user_form = UserEditForm(instance=request.user)
+    return render(request,
+        'edit.html',
+        {'user_form': user_form})
