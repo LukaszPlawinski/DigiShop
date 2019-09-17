@@ -15,7 +15,7 @@ class Order(models.Model):
     city = models.CharField(max_length=100)
     created = models.DateField(default=date.today)
     paid = models.BooleanField(default=True)
-    total = models.DecimalField(max_digits=10, decimal_places=2, default="0")
+    total = models.IntegerField(blank=True, default=0)
     
     class Meta:
         ordering = ('-created',)
