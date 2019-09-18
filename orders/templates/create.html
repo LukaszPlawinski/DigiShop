@@ -7,10 +7,10 @@
 			<form action="." method="post" class="order-form">
 				<div class="row justify-content-around">
 <!----------------------------------------Form Column---------------------->
-					<main class="col-12 col-md-7 checkout-form">
+					<div class="col-12 col-md-7 checkout-form">
 		                    {{ form | crispy }}       
 		                    {% csrf_token %}       
-					</main>
+					</div>
 <!----------------------------------------Payment Column---------------------->
 					<aside class="col-12 col-md-3 mt-4">
 						<div class="items-list">
@@ -39,13 +39,13 @@
 						</div>
 						<hr>
 						<figure class="itemside mb-3">
-							<aside class="aside"><img src={% static 'images/pay-visa.png' %}></aside>
+							<aside class="aside"><img alt="visa" src={% static 'images/pay-visa.png' %}></aside>
 							<div class="text-wrap small text-muted">
 								Pay 84.78 AED ( Save 14.97 AED ) By using ADCB Cards
 							</div>
 						</figure>
 						<figure class="itemside mb-3">
-							<aside class="aside"> <img src={% static 'images/pay-mastercard.png' %}> </aside>
+							<aside class="aside"> <img alt="mastrcard" src={% static 'images/pay-mastercard.png' %}> </aside>
 							<div class="text-wrap small text-muted">
 								Pay by MasterCard and Save 40%. 
 							</div>
