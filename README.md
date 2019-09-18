@@ -9,16 +9,17 @@ An authentication mechanism ahs been set up and provide paid access to the site'
 such as the purchase of a product, edit profile, possibilty to check orders.
 
 ### Main Goals:
-    1.  By authenticating on the site and paying for some of its services, users can advance their own goals. 
-        Before authenticating, the site makes it clear how those goals would be furthered by the site.
-    2.  The site owner is able to make money by providing this set of services to the users. 
-        There is no way for a regular user to bypass the site's mechanisms and derive all of the value available to paid users without paying.
+1.  By authenticating on the site and paying for some of its services, users can advance their own goals. 
+    Before authenticating, the site makes it clear how those goals would be furthered by the site.
+2.  The site owner is able to make money by providing this set of services to the users. 
+    There is no way for a regular user to bypass the site's mechanisms and derive all of the value available to paid users without paying.
 
 ## UX
-    Website Is Designed for users who are looking for electronic products at a bargain price. Acces to all features such as :
-    Category Nav, Search bar Product list, Login, Basket is easy and intuitive. New ,lower prices are big, red and bold.
-    Customer can easy add products to basket however to purchase them login easy needed.
-###Design
+Website Is Designed for users who are looking for electronic products at a bargain price. Acces to all features such as :
+Category Nav, Search bar Product list, Login, Basket is easy and intuitive. New ,lower prices are big, red and bold.
+Customer can easy add products to basket however to purchase them login easy needed.
+    
+### Design
 
 [Mockup](https://xd.adobe.com/spec/f0abd3a4-99ac-4b76-53e4-31837fb720da-869a/grid)
  Created from scratch in Adobe XD
@@ -32,7 +33,7 @@ After authentication through loginn he will be able to purchase them and check h
 
 ### Acceptance Criteria:
 
-* Product should contain:
+* Product should contains:
     * Name
     * Picture
     * Price
