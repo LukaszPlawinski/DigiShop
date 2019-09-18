@@ -139,6 +139,7 @@ After authentication through loginn he will be able to purchase them and check h
 12. [Font Awsome](https://fontawesome.com/) - some icons
 13. [Autoprefixer](https://autoprefixer.github.io/)- plugin which add vendor prefixes for different browsers
 14. Adobe XD - to create mockup/wireframe
+15. AWS S3 services - to store static files and media
 
 
 ## Testing
