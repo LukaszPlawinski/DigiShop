@@ -2,7 +2,7 @@
 # Digi Shop
 [![Build Status](https://travis-ci.org/LukaszPlawinski/DigiShop.svg?branch=master)](https://travis-ci.org/LukaszPlawinski/DigiShop)
 
-![alt text](picture)
+![alt text](https://digi-shop-ecommerce.s3.amazonaws.com/static/images/DigiShop-Image.png)
 
 The purpose of this application was to build Full Stack eCommerce  website based around business logic used to control a centrally-owned dataset. 
 An authentication mechanism ahs been set up and provide paid access to the site's data and/or other activities based on the dataset, 
@@ -143,23 +143,16 @@ After authentication through loginn he will be able to purchase them and check h
 
 ## Testing
 * Github repository is conected with Travis CI by .travis.yml file. Everytime when repository is updated or new commit appears, Travis runs a bunch of thest and display results in Readme file under the name of the project.
-* Html files were tested by [HTML VALIDATOR](https://validator.w3.org/)
-<p>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+* Html files were tested by [HTML VALIDATOR](https://validator.w3.org/)<a href="http://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
             src="http://jigsaw.w3.org/css-validator/images/vcss"
             alt="Valid CSS!" />
     </a>
-</p>
-* Css files were tested by [CSS Validator](https://jigsaw.w3.org/css-validator/)
-<p>
-<a href="http://jigsaw.w3.org/css-validator/check/referer">
+* Css files were tested by [CSS Validator](https://jigsaw.w3.org/css-validator/)<a href="http://jigsaw.w3.org/css-validator/check/referer">
     <img style="border:0;width:88px;height:31px"
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="Valid CSS!" />
     </a>
-</p>
-      
 * Javascript files were tested by [JS Validator](https://codebeautify.org/jsvalidate)
     and [jshint](https://jshint.com/)
 * Python file was tested by [Python validator](https://pythonbuddy.com/)
@@ -200,17 +193,17 @@ After authentication through loginn he will be able to purchase them and check h
 * In heroku environment i saved variables such us: 
 * Right know fully deployed website is visible on heroku server.
 
-###How to Run Project locally for example in  Cloud9:
+### How to Run Project locally for example in  Cloud9:
 It have to be installed:
 * Python 3.6
 * Pip
 * Git
 
-1.Clone github repository
+1. Clone github repository
 ```
 git clone https://github.com/JordenCI/UnicornAttractor---Milestone-4
 ```
-2.Install required modules
+2. Install required modules
 ```
 pip3 -r requirements.txt.
 ```
@@ -219,7 +212,7 @@ pip3 -r requirements.txt.
 python3 manage.py runserver $IP:$PORT
 ```
 4. Create a [stripe](https://stripe.com/gb) account and security keys.
-5.Add 'import env' to settings.py and create env.py file which will contains variables:
+5. Add 'import env' to settings.py and create env.py file which will contains variables:
 * STRIPE_PUBLISHABLE
 * STRIPE_SECRET
 * DATABASE_URL
@@ -244,4 +237,4 @@ python3 manage.py runserver $IP:$PORT
 
 ## Acknowledgements
 Big thanks to my mentor Guido Cecilio for guiding me and showing me path to become a better Developer.
-Thank you for help to Code Institute team and Slack community it was great to meet you all.
+Thank you for help Code Institute team and Slack community it was great to meet you all.
