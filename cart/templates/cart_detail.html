@@ -18,8 +18,8 @@
 						<div class="row text-center">
 							<figure class="media col-3 ml-3">
 								<div class="row">
-									<div class=" col-12 img-wrap"><img src="{% if product.image %}{{ product.image.url }}
-								{% else %}{% static " img/no_image.png " %}{% endif %}" class="img-thumbnail img-sm">
+									<div class=" col-12 img-wrap"><img alt="product image" src="{% if product.image %}{{ product.image.url }}
+								{% else %}{% static " images/no_image.png " %}{% endif %}" class="img-thumbnail img-sm">
 									</div>
 									<h6 class=" col-12 title ">{{ product.name }} </h6>
 								</div>
@@ -57,13 +57,13 @@
 					</div>
 					<hr>
 					<figure class="itemside mb-3">
-						<aside class="aside"><img src={% static 'images/pay-visa.png' %}></aside>
+						<aside class="aside"><img alt="visa" src={% static 'images/pay-visa.png' %}></aside>
 						<div class="text-wrap small text-muted">
 							Pay 84.78 AED ( Save 14.97 AED ) By using ADCB Cards
 						</div>
 					</figure>
 					<figure class="itemside mb-3">
-						<aside class="aside"> <img src={% static 'images/pay-mastercard.png' %}> </aside>
+						<aside class="aside"> <img alt="mastercard" src={% static 'images/pay-mastercard.png' %}> </aside>
 						<div class="text-wrap small text-muted">
 							Pay by MasterCard and Save 40%. 
 						</div>
