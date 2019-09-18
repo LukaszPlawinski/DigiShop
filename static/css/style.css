@@ -15,14 +15,12 @@
 }
 .section-intro{
     margin: 0;
+    background: -o-linear-gradient(rgba(247, 247, 247, 0.2),
+        rgba(255, 255, 255, 0.2)), url("../images/gaming.jpg");
     background: -webkit-gradient(linear,
         left top, left bottom,
         from(rgba(247, 247, 247, 0.2)),
         to(rgba(255, 255, 255, 0.2))), url("../images/gaming.jpg");
-    background: -webkit-linear-gradient(rgba(247, 247, 247, 0.2),
-        rgba(255, 255, 255, 0.2)), url("../images/gaming.jpg");
-    background: -o-linear-gradient(rgba(247, 247, 247, 0.2),
-        rgba(255, 255, 255, 0.2)), url("../images/gaming.jpg");
     background: linear-gradient(rgba(247, 247, 247, 0.2),
         rgba(255, 255, 255, 0.2)), url("../images/gaming.jpg");
     background-position: center;
@@ -102,7 +100,8 @@ a .info-wrap, .card-body .title{
     height: 50px;
     margin-top: 20px;
     width: 100px;
-    animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
+            animation: pulse 2s infinite;
     color: #fff;
     text-shadow: 0 0 1px #000;
 }
@@ -173,6 +172,8 @@ a .info-wrap, .card-body .title{
     font-weight: bold;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#7dc5ee),color-stop(85%, #008cdd),to(#30a2e4));
+    background-image: -o-linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);
     background-image: linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);
 }
 .btn-checkout:hover{
