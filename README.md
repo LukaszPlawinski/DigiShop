@@ -5,7 +5,7 @@
 ![alt text](https://digi-shop-ecommerce.s3.amazonaws.com/static/images/DigiShop-Image.png)
 
 The purpose of this application was to build Full Stack eCommerce  website based around business logic used to control a centrally-owned dataset. 
-An authentication mechanism ahs been set up and provide paid access to the site's data and/or other activities based on the dataset, 
+An authentication mechanism has been set up and provide paid access to the site's data and/or other activities based on the dataset, 
 such as the purchase of a product, edit profile, possibilty to check orders.
 
 ### Main Goals:
@@ -27,8 +27,8 @@ Customer can easy add products to basket however to purchase them login easy nee
 ### User stories:
 
 User will be able to browse and filter products by Category or be able to find them by name. 
-In Product Detail Page there are more information such as: Features,color , model, description.
-From there and after choosing quantity he can  add product to the cart.
+In Product Detail Page there are more information such as: features, color , model, description.
+From there and after choosing quantity he can  add products to the cart.
 After authentication through loginn he will be able to purchase them and check his old orders.
 
 ### Acceptance Criteria:
@@ -41,11 +41,11 @@ After authentication through loginn he will be able to purchase them and check h
     * Features
     * Color
     * Model
-    * description
+    * Description
 *  Each User should be able to:
     * Have possibility to find/filter products:
-        *  by category
-        *  by searched phrase   
+        *  By category
+        *  By searched phrase   
     * Open page with product detail
     * Add product to the basket
 * Logged person should be able to:
@@ -143,11 +143,7 @@ After authentication through loginn he will be able to purchase them and check h
 
 ## Testing
 * Github repository is conected with Travis CI by .travis.yml file. Everytime when repository is updated or new commit appears, Travis runs a bunch of thest and display results in Readme file under the name of the project.
-* Html files were tested by [HTML VALIDATOR](https://validator.w3.org/)<a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!" />
-    </a>
+* Html files were tested by [HTML VALIDATOR](https://validator.w3.org/)
 * Css files were tested by [CSS Validator](https://jigsaw.w3.org/css-validator/)<a href="http://jigsaw.w3.org/css-validator/check/referer">
     <img style="border:0;width:88px;height:31px"
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
@@ -181,7 +177,13 @@ After authentication through loginn he will be able to purchase them and check h
     * Opera (Version 62)
     * MS Edge (Version 42)
     * Safari (Version 11)
-
+* Stripe payment testing
+```
+Please use the below information to test payments.
+- Card number - 4242424242424242
+- CVC - Any 3 digit number.
+- Expiry date - Any date in the future.
+```
 
 ## Deployment
 
