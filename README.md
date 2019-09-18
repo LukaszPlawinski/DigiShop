@@ -142,8 +142,24 @@ After authentication through loginn he will be able to purchase them and check h
 
 
 ## Testing
+* Github repository is conected with Travis CI by .travis.yml file. Everytime when repository is updated or new commit appears, Travis runs a bunch of thest and display results in Readme file under the name of the project.
 * Html files were tested by [HTML VALIDATOR](https://validator.w3.org/)
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
 * Css files were tested by [CSS Validator](https://jigsaw.w3.org/css-validator/)
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
+      
 * Javascript files were tested by [JS Validator](https://codebeautify.org/jsvalidate)
     and [jshint](https://jshint.com/)
 * Python file was tested by [Python validator](https://pythonbuddy.com/)
@@ -184,8 +200,40 @@ After authentication through loginn he will be able to purchase them and check h
 * In heroku environment i saved variables such us: 
 * Right know fully deployed website is visible on heroku server.
 
-### [Live website ]()
-### [Github repository]()
+###How to Run Project locally for example in  Cloud9:
+It have to be installed:
+* Python 3.6
+* Pip
+* Git
+
+1.Clone github repository
+```
+git clone https://github.com/JordenCI/UnicornAttractor---Milestone-4
+```
+2.Install required modules
+```
+pip3 -r requirements.txt.
+```
+3. Try to run your project and copy host name which should be inserted to settings.py ALLOWED_HOST
+```
+python3 manage.py runserver $IP:$PORT
+```
+4. Create a [stripe](https://stripe.com/gb) account and security keys.
+5.Add 'import env' to settings.py and create env.py file which will contains variables:
+* STRIPE_PUBLISHABLE
+* STRIPE_SECRET
+* DATABASE_URL
+* SECRET_KEY
+* AWS_ACCESS_KEY_ID
+* AWS_SECRET_ACCESS_KEY
+6. Run Project with command:
+```
+python3 manage.py runserver $IP:$PORT
+```
+
+
+### [Live website ](https://digi-shop.herokuapp.com)
+### [Github repository](https://github.com/LukaszPlawinski/DigiShop)
 
 
 ## Credits
@@ -195,5 +243,5 @@ After authentication through loginn he will be able to purchase them and check h
 * Icons and some styles comes from: [Bootstrap theme](http://bootstrap-ecommerce.com)
 
 ## Acknowledgements
-    Big thanks to my mentor Guido Cecilio for guiding me and showing me path to become a better Developer.
-    Thank you for help to Code Institute team and Slack community it was great to meet you all.
+Big thanks to my mentor Guido Cecilio for guiding me and showing me path to become a better Developer.
+Thank you for help to Code Institute team and Slack community it was great to meet you all.
