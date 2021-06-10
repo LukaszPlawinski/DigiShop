@@ -10,7 +10,7 @@ colorama==0.3.9
 configobj==5.0.6
 cryptography==2.1.4
 dj-database-url==0.5.0
-Django==2.2.4
+Django==2.2.24
 django-crispy-forms==1.7.2
 django-forms-bootstrap==3.1.0
 django-storages==1.7.2
