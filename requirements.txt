@@ -2,7 +2,7 @@ asn1crypto==0.24.0
 astroid==1.6.6
 attrs==17.4.0
 Automat==0.6.0
-awscli==
+awscli==2
 blinker==1.4
 boto3==
 chardet==3.0.4
